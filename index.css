@@ -4,9 +4,7 @@ body {
    color: #000000;
    margin: 0%;
 
-
 }
-
 
 
 
@@ -29,7 +27,6 @@ body {
    margin-left: 0%;
 
 }
-
 
 
 
@@ -99,12 +96,11 @@ body {
 
 
 
-
 #Label2 {
 
 
    position: absolute;
-   top: 150px;
+   top: 170px;
 
 
 
@@ -121,39 +117,29 @@ body {
 
 #Label3 {
 
-
-
    position: absolute;
-   top: 260px;
-
-
+   top: 280px;
 
    font-size: 80%;
    color: #ffffff;
 
-
    border: 1px solid rgb(56, 243, 165);
    z-index: 3;
 
-
 }
+
+
 
 #Label4 {
 
-
-
    position: absolute;
-   top: 360px;
-
-
+   top: 380px;
 
    font-size: 80%;
    color: #fbff07;
 
-
    border: 1px solid rgb(255, 255, 255);
    z-index: 3;
-
 
 }
 
@@ -161,9 +147,8 @@ body {
 #Button1 {
 
 
-
    position: absolute;
-   top: 460px;
+   top: 480px;
 
    border: 10px solid #787b7e;
 
@@ -180,7 +165,7 @@ body {
 #Button2 {
 
    position: absolute;
-   top: 510px;
+   top: 530px;
 
    border: 10px solid #787b7e;
 
@@ -198,7 +183,7 @@ body {
 #Button3 {
 
    position: absolute;
-   top: 560px;
+   top: 580px;
 
    border: 10px solid #787b7e;
 
