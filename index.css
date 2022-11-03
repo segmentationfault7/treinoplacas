@@ -22,7 +22,7 @@ body {
    align-items: center;
    text-align: center;
 
-   border: 1px solid rgb(175, 199, 173);
+  /* border: 1px solid rgb(175, 199, 173);   */
    flex-direction: column;
    margin-left: 0%;
 
@@ -46,7 +46,7 @@ body {
    text-align: center;
    align-items: center;
 
-   border: 1px solid rgb(247, 44, 105);
+  /* border: 1px solid rgb(247, 44, 105);   */
 
 
 }
@@ -75,7 +75,7 @@ body {
    font-weight: normal;
    font-family: mercosul;
 
-   border: 1px solid rgb(56, 243, 165);
+ /*  border: 1px solid rgb(56, 243, 165);   */
    z-index: 2;
 
 
@@ -108,7 +108,7 @@ body {
    color: #00ff0d;
 
 
-   border: 1px solid rgb(56, 243, 165);
+  /* border: 1px solid rgb(56, 243, 165);  */
    z-index: 3;
 
 
@@ -123,7 +123,7 @@ body {
    font-size: 80%;
    color: #ffffff;
 
-   border: 1px solid rgb(56, 243, 165);
+  /* border: 1px solid rgb(56, 243, 165);   */
    z-index: 3;
 
 }
@@ -137,9 +137,9 @@ body {
 
    font-size: 130%;
    color: #fbff07;
-   letter-spacing: 2px;
+   letter-spacing: 3px;
 
-   border: 1px solid rgb(255, 255, 255);
+  /* border: 1px solid rgb(255, 255, 255);   */
    z-index: 3;
 
 }
@@ -151,11 +151,12 @@ body {
    position: absolute;
    top: 480px;
 
-   border: 10px solid #787b7e;
+   border: 10px solid #787b7e; 
 
    background-color: #787b7e;
 
    color: #FFFFFF;
+
    font-family: Arial;
    font-weight: normal;
    font-size: 70%;
