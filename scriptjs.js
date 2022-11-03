@@ -80,6 +80,41 @@ function removerAcentos(str) {
 
 
 
+function carrega_listas(){
+
+              		   
+  const Url='https://docs.google.com/spreadsheets/d/e/2PACX-1vSrpY-EsBoSiOxGzo1Ffj61ea3QudtLBWbd4oceD-KAJlC-w0BV1YWCDpbPTPGCSX8Hhw3pYQOzUf7m/pub?output=csv';
+   
+  let xhttp = new XMLHttpRequest();
+ 
+  xhttp.open("GET", Url, false);
+
+   xhttp.send();
+
+     let pagina=xhttp.responseText;
+
+     
+     let linhas = pagina.split(/\r?\n/);
+    
+     let aux;
+     
+     let palavra1=[''];
+     let letra1=[''];
+    
+    
+    for(let k=1;k<linhas.length; k++){
+                    
+         aux=linhas[k].split(',');									   
+         palavra1[k-1]=aux[0];
+         letra1[k-1]=aux[1];
+                     
+    }	
+      
+
+       lista=palavra1;
+       letrascorresp=letra1;
+
+}
 
 
 
@@ -331,3 +366,4 @@ function ovircodigo() {
 
 }
 
+carrega_listas();
