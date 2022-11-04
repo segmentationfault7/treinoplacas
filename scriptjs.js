@@ -1,3 +1,16 @@
+/*
+
+DICA: o modo de falar influencia diretamente no resultado,
+exemplo : placa MQA7K63.
+se a plava for soletrada: mike,quebec,Alfa,setimo,kilo,sexto,terceiro o algoritimo reconhece MQA763
+  
+   mas se for soletrada:  mike quebec Alfa, setimo kilo, sexto terceiro   o algoritmo reconhece MQA7K63.
+
+
+*/
+
+
+
 
 var letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numeros = "1234567890";
@@ -31,7 +44,7 @@ recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
 recognition.lang = 'pt-BR';
 recognition.interimResults = false;
-recognition.maxAlternatives = 1;
+recognition.maxAlternatives = 3;
 
 
 
