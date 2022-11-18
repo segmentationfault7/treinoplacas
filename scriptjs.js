@@ -370,6 +370,12 @@ function ocultarcodigo() {
 }
 
 
+if ('speechSynthesis' in window) {
+  window.speechSynthesis.speak(
+    new SpeechSynthesisUtterance('Hello, world!')
+  )
+}
+
 
 function ovircodigo() {
 
