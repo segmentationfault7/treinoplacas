@@ -52,11 +52,7 @@ var ocultarlabel2 = true;
 
 var menssagem = ["...", ".."];
 
-var falarcodigo = new SpeechSynthesisUtterance(codigo.join(''));
-falarcodigo.pitch = 1.0;
-falarcodigo.volume = 1;
-falarcodigo.rate = 1.0;
-falarcodigo.lang = 'pt-BR';
+
 
 
 var alfabeto = ['Alfa', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliett', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu'];
@@ -292,8 +288,7 @@ recognition.onnomatch = function () {
 function falar() {
 
 
-  falarcodigo.text = "QAP";
-  speechSynthesis.speak(falarcodigo);
+ 
   placafalada='';
   recognition.start();
 
@@ -370,18 +365,11 @@ function ocultarcodigo() {
 }
 
 
-if ('speechSynthesis' in window) {
-  window.speechSynthesis.speak(
-    new SpeechSynthesisUtterance('Hello, world!')
-  )
-}
 
 
 function ovircodigo() {
 
-  falarcodigo.text = codigo.join(', ');
-  speechSynthesis.speak(falarcodigo);
-
+ 
 
 }
 
