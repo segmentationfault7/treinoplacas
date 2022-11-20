@@ -167,8 +167,7 @@ function analisedefala3(plac3) {
 function analisedefala() {
 
 
-   
- 
+    
       resultado = resultado.toLowerCase();
       resultado = removerAcentos(resultado);
  
@@ -287,7 +286,8 @@ recognition.onnomatch = function () {
 
 function falar() {
 
-
+ 
+  falarapp.falartexto('q a p');
  
   placafalada='';
   recognition.start();
@@ -369,7 +369,8 @@ function ocultarcodigo() {
 
 function ovircodigo() {
 
- 
+   let txt=codigo.join(' ').toString();
+   falarapp.falartexto(txt);
 
 }
 
