@@ -12,26 +12,25 @@ se a plava for soletrada: mike,quebec,Alfa,setimo,kilo,sexto,terceiro o algoriti
 
 
 
-var letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numeros = "1234567890";
-var cardinais = ["primeiro", "segundo", "terceiro", "quarto", "quinto", "sexto", "sétimo", "oitavo", "nono", "negativo"];
-var alfabeto = ["Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"];
-var placa = ["B", "R", "A", "5", "I", "2", "2"];
-var codigo = ["Bravo", "Romeo", "Alfa", "Quinto", "India", "Segundo", "Segundo"];
-var num = 1;
-var maxalter = 1;
+const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numeros = "1234567890";
+const cardinais = ["primeiro", "segundo", "terceiro", "quarto", "quinto", "sexto", "sétimo", "oitavo", "nono", "negativo"];
+const alfabeto = ["Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"];
+const placa = ["B", "R", "A", "5", "I", "2", "2"];
+const codigo = ["Bravo", "Romeo", "Alfa", "Quinto", "India", "Segundo", "Segundo"];
+const num = 1;
 
 
-var cont = 1000;
-var placasrepetidas = [];
-var plakas = "";
-var cont2 = 1000;
-var codk = [];
+
+const cont = 1000;
+let placasrepetidas = [];
+let plakas = "";
+const cont2 = 1000;
+let codk = [];
 
 
-var recognition = new webkitSpeechRecognition();
+const recognition = new webkitSpeechRecognition();
 
-if (!recognition) { console.log("falhou no objeto recognition"); }
 
 
 let words1 = ['alfa', 'bravo', 'charlie', 'carly', 'charles', 'charge', 'celta', 'echo', 'eco', 'eko', 'foxtrot', 'rockstar', 'golf', 'golfe', 'hotel', 'india', 'índio', 'inter', 'juliett', 'juliete', 'juliana', 'kilo', 'lima', 'mike', 'maiki', 'november', 'novembro', 'novembre', 'oscar', 'oscara', 'rosca', 'posca', 'porca', 'papa', 'quebec', 'playback', 'romeo', 'romeu', 'sierra', 'ceará', 'serra', 'tango', 'uniform', 'unifor', 'victor', 'whiskey', 'xray', 'yankee', 'ianque', 'yang', 'funk', 'eaq', 'eaqui', 'zulu', 'xis rei', 'cheguei', 'shirley', 'iank', 'iankee', 'ianque', 'yanque', 'bianchi', 'quilo', 'kg', 'killer', 'filó', 'tiro', 'rei', 'x-rei', 'x rei', 'ex rei', 'é que', 'exrei', 'errei', 'bianca', 'ierra', 'x-man', 'xmen', 'zero', 'cesto', '3º', '2º', 'cesta', 'sexta', 'cisto', 'pinto', 'negativo', 'quarto', 'nono', 'dona', 'nona', '8º', 'quinto', 'quinta', '1º', '4º', '5º', '6º', '7º', '9º', '0', 'frango', '7', 'sete', 'segundo', 'índia', 'sheik', 'delta', 'whisky', 'x-ray', 'juliet', 'o meu', 'sexto', 'oitavo', '6', 'primeiro', 'terceiro', 'sétimo', 'x race', 'aquilo', 'maike', 'é cor', 'bianch', 'x ray', 'alpha', 'segunda', 'cielo', 'é co', 'quarta', 'no no', 'tô no', '8', '1', '2', '3', '4', '5', '6', '7', '9', 'bec', 'nova', 'nulo', 'iac', 'brabo', 'gol', 'ótica', 'costa', 'texto', 'ssistema', 'mais', 'sto', 'bike', 'sys tu', 'tel', 'guerra', 'yank', 'e a', 'aqui', 'nome', 'dono', 'qbex', 'julia', 'outback', 'ango', 'urso', 'mapa', 'ulu', 'no na', 'ate', ' no ', 'papai', 'ex a', 'fotos trote', 'fox trote', 'quente', 'oitava', 'celta', 'numa', 'quatro', 'o meu', 'negativa', 'uisque', 'novo', 'costa'];
@@ -48,35 +47,27 @@ recognition.maxAlternatives = 3;
 
 
 
-var ocultarlabel2 = true;
+let ocultarlabel2 = true;
 
-var menssagem = ["...", ".."];
-
-
+let menssagem = ["...", ".."];
 
 
-var alfabeto = ['Alfa', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliett', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu'];
 
-var lista = ['alfa', 'bravo', 'charlie', 'carly', 'charles', 'charge', 'celta', 'echo', 'eco', 'eko', 'foxtrot', 'rockstar', 'golf', 'golfe', 'hotel', 'india', 'índio', 'inter', 'juliett', 'juliete', 'juliana', 'kilo', 'lima', 'mike', 'maiki', 'november', 'novembro', 'novembre', 'oscar', 'oscara', 'rosca', 'posca', 'porca', 'papa', 'quebec', 'playback', 'romeo', 'romeu', 'sierra', 'ceará', 'serra', 'tango', 'uniform', 'unifor', 'victor', 'whiskey', 'xray', 'yankee', 'ianque', 'yang', 'funk', 'eaq', 'eaqui', 'zulu', 'xis rei', 'cheguei', 'shirley', 'iank', 'iankee', 'ianque', 'yanque', 'bianchi', 'quilo', 'kg', 'killer', 'filó', 'tiro', 'rei', 'x-rei', 'x rei', 'ex rei', 'é que', 'exrei', 'errei', 'bianca', 'ierra', 'x-man', 'xmen', 'zero', 'cesto', '3º', '2º', 'cesta', 'sexta', 'cisto', 'pinto', 'negativo', 'quarto', 'nono', 'dona', 'nona', '8º', 'quinto', 'quinta', '1º', '4º', '5º', '6º', '7º', '9º', '0', 'frango', '7', 'sete', 'segundo', 'índia', 'sheik', 'delta', 'whisky', 'x-ray', 'juliet', 'o meu', 'sexto', 'oitavo', '6', 'primeiro', 'terceiro', 'sétimo', 'x race', 'aquilo', 'maike', 'é cor', 'bianch', 'x ray', 'alpha', 'segunda', 'cielo', 'é co', 'quarta', 'no no', 'tô no', '8', '1', '2', '3', '4', '5', '6', '7', '9', 'bec', 'nova', 'nulo', 'iac', 'brabo', 'gol', 'ótica', 'costa', 'texto', 'ssistema', 'mais', 'sto', 'bike', 'sys tu', 'tel', 'guerra', 'yank', 'e a', 'aqui', 'nome', 'dono', 'qbex', 'julia', 'outback', 'ango', 'urso', 'mapa', 'ulu', 'no na', 'ate', ' no ', 'papai', 'ex a', 'fotos trote', 'fox trote', 'quente', 'oitava', 'celta', 'numa', 'quatro', 'o meu', 'negativa', 'uisque', 'novo', 'costa', ' s ', 'zullu', 'schrappe', 'charlly', 'nuno', 'ekko', 'achei', 'hey', 'set', 'mosca', 's'];// o 's' sempre por ultimo
-
-var letrascorresp = ['A', 'B', 'C', 'C', 'C', 'C', 'D', 'E', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'I', 'I', 'I', 'J', 'J', 'J', 'K', 'L', 'M', 'M', 'N', 'N', 'N', 'O', 'O', 'O', 'O', 'O', 'P', 'Q', 'Q', 'R', 'R', 'S', 'S', 'S', 'T', 'U', 'U', 'V', 'W', 'X', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Z', 'X', 'X', 'X', 'Y', 'Y', 'Y', 'Y', 'Y', 'K', 'K', 'K', 'K', 'K', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'Y', 'S', 'X', 'X', '0', '6', '3', '2', '6', '6', '6', '5', '0', '4', '9', '9', '9', '8', '5', '5', '1', '4', '5', '6', '7', '9', '0', 'T', '7', '7', '2', 'I', 'X', 'D', 'W', 'X', 'J', 'R', '6', '8', '6', '1', '3', '7', 'X', 'K', 'M', 'E', 'Y', 'X', 'A', '2', 'S', 'E', '4', '9', '9', '8', '1', '2', '3', '4', '5', '6', '7', '9', 'Q', '9', '9', 'Y', 'B', 'G', 'O', 'O', '6', '6', 'M', '6', 'M', '6', 'H', 'S', 'Y', 'Y', 'Y', '9', '9', 'Q', 'J', 'Q', 'T', 'U', 'P', 'Z', '9', 'H', '9', 'P', 'X', 'F', 'F', '5', '8', 'D', '9', '4', 'R', 'N', 'W', '9', 'O', '2', 'Z', 'X', 'C', '9', 'E', 'X', 'X', '7', 'O', '2'];// o '2' sempre por ultimo
+let sub = '-------------------------';
 
 
-var sub = '-------------------------';
-var letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var numeros = '0123456789';
-var resultado = 'result';
-var placafalada = '';
-var lista2 = lista.join(' ');
-var numeros2 = ['Negativo', 'Primeiro', 'Segundo', 'Terceiro', 'Quarto', 'Quinto', 'Sexto', 'Sétimo', 'Oitavo', 'Nono'];
+let resultado = 'result';
+let placafalada = '';
+let lista2 = lista.join(' ');
+const numeros2 = ['Negativo', 'Primeiro', 'Segundo', 'Terceiro', 'Quarto', 'Quinto', 'Sexto', 'Sétimo', 'Oitavo', 'Nono'];
 
-var letrascorresp2 = letrascorresp.join(' ');
-var resultadoanalise = ' ';
+let letrascorresp2 = letrascorresp.join(' ');
+let resultadoanalise = ' ';
 
 
 
 
-var ret = '';
+let ret = '';
 
 
 function removerAcentos(str) {
@@ -172,11 +163,11 @@ function analisedefala() {
       resultado = removerAcentos(resultado);
  
 
-      var res = 0;
-      var subst = '';
-      var aux = '';
+      let res = 0;
+     let subst = '';
+     let aux = '';
 
-  var indices = [{ letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }];
+      const indices = [{ letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }];
 
 
   for (var i = 0; i < 7; i++) {
@@ -241,7 +232,7 @@ function analisedefala() {
 
      analisedefala3(placafalada);
 
-    //resultado = '';
+     
 
   
 
@@ -253,8 +244,8 @@ function analisedefala() {
 
 recognition.onresult = function (event) {
 
-  var last = event.results.length - 1;
-  var command = event.results[last][0].transcript;
+  let last = event.results.length - 1;
+  let command = event.results[last][0].transcript;
 
   menssagem = command.toString();
 
@@ -298,7 +289,7 @@ function falar() {
 
 
 function novaplaca() {
-  cont = 1000;
+  
 
   document.getElementById("Label3").innerHTML = 'placa falada';
 
