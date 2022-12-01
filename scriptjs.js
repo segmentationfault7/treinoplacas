@@ -17,7 +17,7 @@ const numeros = "1234567890";
 const cardinais = ["primeiro", "segundo", "terceiro", "quarto", "quinto", "sexto", "sétimo", "oitavo", "nono", "negativo"];
 const alfabeto = ["Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"];
 const placa = ["B", "R", "A", "5", "I", "2", "2"];
-const codigo = ["Bravo", "Romeo", "Alfa", "Quinto", "India", "Segundo", "Segundo"];
+let codigo = ["Bravo", "Romeo", "Alfa", "Quinto", "India", "Segundo", "Segundo"];
 let num = 1;
 
 
@@ -26,11 +26,10 @@ let letrascorresp;
 const cont = 1000;
 let placasrepetidas = [];
 let plakas = "";
-const cont2 = 1000;
 let codk = [];
 
 
-const recognition = new webkitSpeechRecognition();
+let recognition = new webkitSpeechRecognition();
 
 
 
@@ -65,8 +64,6 @@ const numeros2 = ['Negativo', 'Primeiro', 'Segundo', 'Terceiro', 'Quarto', 'Quin
 
 
 let resultadoanalise = ' ';
-
-
 
 
 let ret = '';
@@ -283,6 +280,7 @@ function falar() {
   falarapp.falartexto('q a p');
  
   placafalada='';
+
   recognition.start();
 
 }
