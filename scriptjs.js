@@ -13,7 +13,7 @@ se a plava for soletrada: mike,quebec,Alfa,setimo,kilo,sexto,terceiro o algoriti
 
 
 const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const numeros = "1234567890";
+const numeros = "0123456789";
 const cardinais = ["primeiro", "segundo", "terceiro", "quarto", "quinto", "sexto", "sétimo", "oitavo", "nono", "negativo"];
 const alfabeto = ["Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"];
 const placa = ["B", "R", "A", "5", "I", "2", "2"];
