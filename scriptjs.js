@@ -18,10 +18,11 @@ const cardinais = ["primeiro", "segundo", "terceiro", "quarto", "quinto", "sexto
 const alfabeto = ["Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"];
 const placa = ["B", "R", "A", "5", "I", "2", "2"];
 const codigo = ["Bravo", "Romeo", "Alfa", "Quinto", "India", "Segundo", "Segundo"];
-const num = 1;
+let num = 1;
 
 
-
+let lista;
+let letrascorresp;
 const cont = 1000;
 let placasrepetidas = [];
 let plakas = "";
@@ -58,10 +59,11 @@ let sub = '-------------------------';
 
 let resultado = 'result';
 let placafalada = '';
-let lista2 = lista.join(' ');
+
+
 const numeros2 = ['Negativo', 'Primeiro', 'Segundo', 'Terceiro', 'Quarto', 'Quinto', 'Sexto', 'Sétimo', 'Oitavo', 'Nono'];
 
-let letrascorresp2 = letrascorresp.join(' ');
+
 let resultadoanalise = ' ';
 
 
