@@ -86,7 +86,7 @@ function carrega_listas(){
    
   let xhttp = new XMLHttpRequest();
  
-  xhttp.open("GET", Url, false);
+  xhttp.open('GET', Url, false);
 
    xhttp.send();
 
@@ -361,7 +361,6 @@ function ocultarcodigo() {
 function ovircodigo() {
 
    let txt=codigo.join(' ').toString();
-   
    falarapp.falartexto(txt);
 
 }
