@@ -361,6 +361,7 @@ function ocultarcodigo() {
 function ovircodigo() {
 
    let txt=codigo.join(' ').toString();
+   
    falarapp.falartexto(txt);
 
 }
