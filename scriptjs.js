@@ -84,7 +84,7 @@ function removerAcentos(str) {
 
 function carrega_listas(){
 
-  document.getElementById('Label3').style.display = 'none';
+  
               		   
   const Url='https://docs.google.com/spreadsheets/d/e/2PACX-1vSrpY-EsBoSiOxGzo1Ffj61ea3QudtLBWbd4oceD-KAJlC-w0BV1YWCDpbPTPGCSX8Hhw3pYQOzUf7m/pub?output=csv';
    
