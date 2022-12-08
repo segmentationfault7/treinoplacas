@@ -52,6 +52,8 @@ let ocultarlabel2 = true;
 
 let menssagem = ["...", ".."];
 
+let mostrar_placa_falada=false;
+let cont_mostrar_placa=0;
 
 
 let sub = '-------------------------';
@@ -153,7 +155,30 @@ function analisedefala3(plac3) {
 }
 
 
+function exibir_placa_falada(){
 
+    cont_mostrar_placa++;
+
+
+    if(cont_mostrar_placa>9){
+
+      document.getElementById("Label3").style.display = '';
+      
+
+    } 
+
+      if(cont_mostrar_placa >20){
+        
+        
+       document.getElementById("Label3").style.display = 'none';
+        cont_mostrar_placa=0;
+      
+      }
+       
+    
+
+
+}
 
 function analisedefala() {
 
@@ -373,5 +398,7 @@ function ovircodigo() {
    falarapp.falartexto(txt);
 
 }
+
+document.getElementById("Label3").style.display = 'none';
 
 carrega_listas();
