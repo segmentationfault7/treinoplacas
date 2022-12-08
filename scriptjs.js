@@ -288,7 +288,7 @@ function falar() {
                   recognition.start();
             } else{
 
-              document.getElementById("Label3").innerHTML = 'internet offline';
+              document.getElementById("Label4").innerHTML = 'internet offline';
 
             }
 }
