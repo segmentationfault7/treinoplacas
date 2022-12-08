@@ -27,6 +27,7 @@ const cont = 1000;
 let placasrepetidas = [];
 let plakas = "";
 let codk = [];
+let esta_online;
 
 
 let recognition = new webkitSpeechRecognition();
@@ -276,13 +277,20 @@ recognition.onnomatch = function () {
 
 function falar() {
 
- 
-  falarapp.falartexto('q a p');
- 
-  placafalada='';
+ esta_online= navigator.onLine;
 
-  recognition.start();
+              if(esta_online) {  
+                
+                falarapp.falartexto('q a p');
+                
+                  placafalada='';
 
+                  recognition.start();
+            } else{
+
+              document.getElementById("Label3").innerHTML = 'internet offline';
+
+            }
 }
 
 
