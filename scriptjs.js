@@ -227,8 +227,9 @@ function analisedefala() {
    
 
      console.log('placafalada' + placafalada);
+     esta_online= navigator.onLine;
       
-     document.getElementById('Label4').innerHTML = placafalada;
+     if(esta_online){ document.getElementById('Label4').innerHTML = placafalada;}
 
      analisedefala3(placafalada);
 
