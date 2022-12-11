@@ -343,7 +343,9 @@ function falar() {
                                 
                            if(ativaspeech) {
 
-                            falarapp.aciona_speech();
+                            falarapp.falartexto('q a p 2');
+                           
+                            speech.aciona_speech();
 
 
                            }else{   
