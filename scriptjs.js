@@ -28,6 +28,8 @@ let placasrepetidas = [];
 let plakas = "";
 let codk = [];
 let esta_online;
+let cont_ativa_speech=0;
+let ativaspeech=false;
 
 
 let recognition = new webkitSpeechRecognition();
@@ -176,10 +178,40 @@ function exibir_placa_falada(){
       
       }
        
+  
+}
+
+
+
+
+function ative_speech(){
+
+  cont_ativa_speech++;
+
+  if(cont_ativa_speech>9){
+
+   ativaspeech=true;
+   falarapp.falartexto('speech android ativado');
     
 
+  } 
+
+    if(cont_ativa_speech>20){
+      
+      
+       ativaspeech=false;
+     cont_ativa_speech=0;
+    
+    }
+     
 
 }
+
+
+
+
+
+
 
 function analisedefala() {
 
@@ -304,16 +336,28 @@ recognition.onnomatch = function () {
 
 function falar() {
 
- esta_online= navigator.onLine;
+             esta_online = navigator.onLine;
 
               if(esta_online) {  
                 
-                falarapp.falartexto('q a p');
-                
-                  placafalada='';
+                                
+                           if(ativaspeech) {
 
-                  recognition.start();
-            } else{
+                            falarapp.aciona_speech();
+
+
+                           }else{   
+                            
+                            falarapp.falartexto('q a p');
+                                  
+                                    placafalada='';
+
+                                    recognition.start();
+                          }
+         
+         
+         
+                } else{
 
               document.getElementById("Label4").innerHTML = 'internet offline';
 
