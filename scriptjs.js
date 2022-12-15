@@ -216,7 +216,8 @@ function ative_speech(){
 function analisedefala() {
 
 
-    
+  document.getElementById("Label3").innerHTML = resultado;
+
       resultado = resultado.toLowerCase();
       resultado = removerAcentos(resultado);
  
@@ -313,8 +314,6 @@ recognition.onresult = function (event) {
 
   resultado = menssagem;
 
-
-  resultado = resultado.toLowerCase();
 
 
   analisedefala();
