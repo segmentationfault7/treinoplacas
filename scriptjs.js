@@ -345,8 +345,8 @@ function falar() {
 
                             falarapp.falartexto('q a p');
                            
-                            falarapp.aciona_speech();
-
+                            // falarapp.aciona_speech();
+                            console.log("acionaspeech");
 
                            }else{   
                             
