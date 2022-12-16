@@ -285,7 +285,9 @@ function analisedefala() {
 
    
 
-     console.log('placafalada' + placafalada);
+    if(ativaspeech){ console.log('placafalada' + placafalada);}
+
+
      esta_online= navigator.onLine;
       
      if(esta_online){ document.getElementById('Label4').innerHTML = placafalada;}
