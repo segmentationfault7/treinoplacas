@@ -156,7 +156,7 @@ function analisedefala3(plac3) {
 
      if(placafalada.length==7){
       
-        document.getElementById('Label4').innerHTML ='placa falada: ' + placafalada;
+        document.getElementById('Label4').innerHTML ='placa falada:\n' + placafalada;
         
         falarapp.falartexto(ret);
 
