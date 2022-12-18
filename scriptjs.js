@@ -322,7 +322,7 @@ recognition.onresult = function (event) {
 
   menssagem = command.toString();
 
-  document.getElementById("Label3").innerHTML = menssagem;
+ 
 
 
   resultado = menssagem;
@@ -356,6 +356,7 @@ function falar() {
                            if(ativaspeech) {
 
                             falarapp.falartexto('q a p');
+                            placafalada='';
                            
                             // falarapp.aciona_speech();
                             console.log("acionaspeech");
@@ -380,14 +381,7 @@ function falar() {
 }
 
 
-var teste1='';
-function teste(tess){
 
-  console.log(tess);
-  falarapp.falartexto('fun teste ok');
-  falarapp.falartexto(teste1);
-
-}
 
 function novaplaca() {
   
