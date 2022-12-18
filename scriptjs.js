@@ -373,13 +373,21 @@ function falar() {
          
                 } else{
 
+                  falarapp.falartexto('sem internet');
               document.getElementById("Label4").innerHTML = 'internet offline';
 
             }
 }
 
 
+var teste1='';
+function teste(tess){
 
+  console.log(tess);
+  falarapp.falartexto('fun teste ok');
+  falarapp.falartexto(teste1);
+
+}
 
 function novaplaca() {
   
