@@ -29,7 +29,7 @@ let plakas = "";
 let codk = [];
 let esta_online;
 
-let ativaspeech=false;
+let ativaspeech = false;
 
 
 let recognition = new webkitSpeechRecognition();
@@ -54,8 +54,8 @@ let ocultarlabel2 = true;
 
 let menssagem = ["...", ".."];
 
-let mostrar_placa_falada=false;
-let cont_mostrar_placa=0;
+let mostrar_placa_falada = false;
+let cont_mostrar_placa = 0;
 
 
 let sub = '-------------------------';
@@ -84,40 +84,40 @@ function removerAcentos(str) {
 
 
 
-function carrega_listas(){
+function carrega_listas() {
 
-  
-              		   
-  const Url='https://docs.google.com/spreadsheets/d/e/2PACX-1vSrpY-EsBoSiOxGzo1Ffj61ea3QudtLBWbd4oceD-KAJlC-w0BV1YWCDpbPTPGCSX8Hhw3pYQOzUf7m/pub?output=csv';
-   
+
+
+  const Url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSrpY-EsBoSiOxGzo1Ffj61ea3QudtLBWbd4oceD-KAJlC-w0BV1YWCDpbPTPGCSX8Hhw3pYQOzUf7m/pub?output=csv';
+
   let xhttp = new XMLHttpRequest();
- 
+
   xhttp.open('GET', Url, false);
 
-   xhttp.send();
+  xhttp.send();
 
-     let pagina=xhttp.responseText;
+  let pagina = xhttp.responseText;
 
-     
-     let linhas = pagina.split(/\r?\n/);
-    
-     let aux;
-     
-     let palavra1=[''];
-     let letra1=[''];
-    
-    
-    for(let k=1;k<linhas.length; k++){
-                    
-         aux=linhas[k].split(',');									   
-         palavra1[k-1]=aux[0];
-         letra1[k-1]=aux[1];
-                     
-    }	
-      
 
-       lista=palavra1;
-       letrascorresp=letra1;
+  let linhas = pagina.split(/\r?\n/);
+
+  let aux;
+
+  let palavra1 = [''];
+  let letra1 = [''];
+
+
+  for (let k = 1; k < linhas.length; k++) {
+
+    aux = linhas[k].split(',');
+    palavra1[k - 1] = aux[0];
+    letra1[k - 1] = aux[1];
+
+  }
+
+
+  lista = palavra1;
+  letrascorresp = letra1;
 
 }
 
@@ -127,7 +127,7 @@ function carrega_listas(){
 function analisedefala3(plac3) {
 
 
-    ret = '';
+  ret = '';
 
 
   for (var i = 0; i < 3; i++) {
@@ -153,38 +153,53 @@ function analisedefala3(plac3) {
 
   }
 
-  resultado='';
-  
-}
 
-
-function exibir_placa_falada(){
-
-    cont_mostrar_placa++;
-
-
-    if(cont_mostrar_placa>9){
-
-      document.getElementById('Label3').style.display = '';
+     if(placafalada.length==7){
       
-
-    } 
-
-      if(cont_mostrar_placa >20){
+        document.getElementById('Label4').innerHTML ='placa falada: ' + placafalada;
         
-        
-       document.getElementById('Label3').style.display = 'none';
-        cont_mostrar_placa=0;
-      
-      }
-       
-  
+        falarapp.falartexto(ret);
+
+
+     }else{
+
+      document.getElementById('Label4').innerHTML ='fala não entendida!';
+     
+      falarapp.falartexto('não entendi!');
+
+     }
+
+
+
+  resultado = '';
+
 }
 
 
 
 
+function exibir_placa_falada() {
 
+  cont_mostrar_placa++;
+
+
+  if (cont_mostrar_placa > 9) {
+
+    document.getElementById('Label3').style.display = '';
+
+
+  }
+
+  if (cont_mostrar_placa > 20) {
+
+
+    document.getElementById('Label3').style.display = 'none';
+    cont_mostrar_placa = 0;
+
+  }
+
+
+}
 
 
 
@@ -196,15 +211,15 @@ function analisedefala() {
 
   document.getElementById("Label3").innerHTML = resultado;
 
-      resultado = resultado.toLowerCase();
-      resultado = removerAcentos(resultado);
- 
+  resultado = resultado.toLowerCase();
+  resultado = removerAcentos(resultado);
 
-      let res = 0;
-     let subst = '';
-     let aux = '';
 
-      const indices = [{ letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }];
+  let res = 0;
+  let subst = '';
+  let aux = '';
+
+  const indices = [{ letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }, { letra: '', valor: 0 }];
 
 
   for (var i = 0; i < 7; i++) {
@@ -261,30 +276,30 @@ function analisedefala() {
 
   }
 
-   
 
-  
-     esta_online= navigator.onLine;
-      
-     document.getElementById('Label4').innerHTML = '';
 
-     if(esta_online){ 
-     
-      document.getElementById('Label4').innerHTML = placafalada;
-    
-       analisedefala3(placafalada);
 
-       }else{
+  esta_online = navigator.onLine;
 
-      document.getElementById('Label4').innerHTML ='OFFLINE';
+  document.getElementById('Label4').innerHTML = '';
 
-    }
+  if (esta_online) {
 
-    
+          //  document.getElementById('Label4').innerHTML = placafalada;
 
-     
+            analisedefala3(placafalada);
 
-  
+  } else {
+
+    document.getElementById('Label4').innerHTML = 'OFFLINE';
+
+  }
+
+
+
+
+
+
 
 }
 
@@ -299,7 +314,7 @@ recognition.onresult = function (event) {
 
   menssagem = command.toString();
 
- 
+
 
 
   resultado = menssagem;
@@ -325,29 +340,29 @@ recognition.onnomatch = function () {
 
 function falar() {
 
-             esta_online = navigator.onLine;
+  esta_online = navigator.onLine;
 
-              if(esta_online) {  
-                
-                           falarapp.falartexto('q a p');
-                                  
-                                    placafalada='';
-                                    recognition.start();
-                          
-         
-                } else{
+  if (esta_online) {
 
-                  falarapp.falartexto('sem internet');
-                   document.getElementById("Label4").innerHTML = 'internet offline';
+    falarapp.falartexto('q a p');
 
-            }
+    placafalada = '';
+    recognition.start();
+
+
+  } else {
+
+    falarapp.falartexto('sem internet');
+    document.getElementById("Label4").innerHTML = 'internet offline';
+
+  }
 }
 
 
 
 
 function novaplaca() {
-  
+
 
   document.getElementById("Label3").innerHTML = 'placa falada';
 
@@ -418,8 +433,8 @@ function ocultarcodigo() {
 
 function ovircodigo() {
 
-   let txt=codigo.join(' ').toString();
-   falarapp.falartexto(txt);
+  let txt = codigo.join(' ').toString();
+  falarapp.falartexto(txt);
 
 }
 
