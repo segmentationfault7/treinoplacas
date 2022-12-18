@@ -28,7 +28,7 @@ let placasrepetidas = [];
 let plakas = "";
 let codk = [];
 let esta_online;
-let cont_ativa_speech=0;
+
 let ativaspeech=false;
 
 
@@ -184,28 +184,6 @@ function exibir_placa_falada(){
 
 
 
-function ative_speech(){
-
-  cont_ativa_speech++;
-
-  if(cont_ativa_speech>9){
-
-   ativaspeech=true;
-   falarapp.falartexto('speech android ativado');
-    
-
-  } 
-
-    if(cont_ativa_speech>20){
-      
-      
-       ativaspeech=false;
-     cont_ativa_speech=0;
-    
-    }
-     
-
-}
 
 
 
@@ -285,17 +263,16 @@ function analisedefala() {
 
    
 
-    if(ativaspeech){ console.log('placafalada' + placafalada);}
-
-
+  
      esta_online= navigator.onLine;
       
      document.getElementById('Label4').innerHTML = '';
+
      if(esta_online){ 
      
       document.getElementById('Label4').innerHTML = placafalada;
     
-     analisedefala3(placafalada);
+       analisedefala3(placafalada);
 
        }else{
 
@@ -352,30 +329,16 @@ function falar() {
 
               if(esta_online) {  
                 
-                                
-                           if(ativaspeech) {
-
-                            falarapp.falartexto('q a p');
-                            placafalada='';
-                           
-                            // falarapp.aciona_speech();
-                            console.log("acionaspeech");
-
-                           }else{   
-                            
-                            falarapp.falartexto('q a p');
+                           falarapp.falartexto('q a p');
                                   
                                     placafalada='';
-
                                     recognition.start();
-                          }
-         
-         
+                          
          
                 } else{
 
                   falarapp.falartexto('sem internet');
-              document.getElementById("Label4").innerHTML = 'internet offline';
+                   document.getElementById("Label4").innerHTML = 'internet offline';
 
             }
 }
