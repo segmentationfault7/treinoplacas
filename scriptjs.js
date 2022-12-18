@@ -290,9 +290,20 @@ function analisedefala() {
 
      esta_online= navigator.onLine;
       
-     if(esta_online){ document.getElementById('Label4').innerHTML = placafalada;}
-
+     document.getElementById('Label4').innerHTML = '';
+     if(esta_online){ 
+     
+      document.getElementById('Label4').innerHTML = placafalada;
+    
      analisedefala3(placafalada);
+
+    }else{
+
+      document.getElementById('Label4').innerHTML ='OFFLINE';
+
+    }
+
+    
 
      
 
