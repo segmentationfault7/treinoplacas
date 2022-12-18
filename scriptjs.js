@@ -297,7 +297,7 @@ function analisedefala() {
     
      analisedefala3(placafalada);
 
-    }else{
+       }else{
 
       document.getElementById('Label4').innerHTML ='OFFLINE';
 
