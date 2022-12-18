@@ -153,7 +153,7 @@ function analisedefala3(plac3) {
 
   }
 
-  
+  resultado='';
   
 }
 
