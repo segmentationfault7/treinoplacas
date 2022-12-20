@@ -156,9 +156,11 @@ function analisedefala3(plac3) {
 
      if( analisa_placa(placafalada)   ){
       
-       let pfalada = 'placa falada:' + placafalada;
+       let pfalada = 'placa falada:';
 
         document.getElementById('Label4').innerHTML =pfalada;
+
+        document.getElementById("Label5").innerHTML =  placafalada;
         
         falarapp.falartexto(ret);
 
@@ -166,7 +168,7 @@ function analisedefala3(plac3) {
      }else{
 
       document.getElementById('Label4').innerHTML ='fala não entendida!';
-     
+      document.getElementById("Label5").innerHTML =  '';
       falarapp.falartexto('não entendi!');
 
      }
@@ -212,6 +214,8 @@ function analisedefala() {
 
 
   document.getElementById("Label3").innerHTML = resultado;
+  
+ 
 
   resultado = resultado.toLowerCase();
   resultado = removerAcentos(resultado);
