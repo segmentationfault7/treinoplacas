@@ -151,9 +151,9 @@ body {
    position: absolute;
    top: 350px;
 
-   font-size: 150%;
-   color: #ff401e;
-   letter-spacing: 3px;
+   font-size: 200%;
+   color: #ff5639;
+   letter-spacing: 5px;
 
   /* border: 1px solid rgb(255, 255, 255);   */
    z-index: 3;
