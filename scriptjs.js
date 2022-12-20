@@ -399,7 +399,7 @@ function novaplaca() {
 
   if (ocultarlabel2) {
 
-    document.getElementById("Label2").innerHTML = "mostrar-codigo";
+    document.getElementById("Label2").innerHTML = "mostrar-código";
 
 
   } else {
