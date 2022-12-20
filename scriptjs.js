@@ -156,7 +156,7 @@ function analisedefala3(plac3) {
 
      if( analisa_placa(placafalada) ){
       
-       let pfalada = 'placa falada: \n' + placafalada;
+       let pfalada = 'placa falada:' + placafalada;
 
         document.getElementById('Label4').innerHTML =pfalada;
         
@@ -443,18 +443,19 @@ function ovircodigo() {
       function analisa_placa(pl){
       
           let aux=pl.split();
+          let retorno=false;
 
           if(pl.length()==7 && aux[0]>64 && aux[1]>64 && aux[2]>64 && aux[3]<58 && aux[4] <91 &&  aux[5]<58 && aux[6]<58 ){
             
 
-           return true;
+          retorno=true;
 
           }else{
 
-            return false;
+            retorno=false;
           }
 
-
+            return retorno;
       }
 
       carrega_listas();
