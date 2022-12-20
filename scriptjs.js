@@ -154,7 +154,7 @@ function analisedefala3(plac3) {
   }
 
 
-     if( placafalada.length==7 ){
+     if( analisa_placa(placafalada)   ){
       
        let pfalada = 'placa falada:' + placafalada;
 
@@ -442,10 +442,11 @@ function ovircodigo() {
      
       function analisa_placa(pl){
       
-          let aux=pl.split();
+          
+          console.log(pl.charCodeAt(1));
           let retorno=false;
 
-          if(pl.length()==7 && aux[0]>64 && aux[1]>64 && aux[2]>64 && aux[3]<58 && aux[4] <91 &&  aux[5]<58 && aux[6]<58 ){
+          if(pl.length==7 && pl.charCodeAt(0)>64 && pl.charCodeAt(1)>64 && pl.charCodeAt(2)>64 && pl.charCodeAt(3)<58 && pl.charCodeAt(4) <91 &&  pl.charCodeAt(5)<58 && pl.charCodeAt(6)<58 ){
             
 
           retorno=true;
