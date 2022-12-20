@@ -153,6 +153,15 @@ function analisedefala3(plac3) {
   }
 
 
+        if(placafalada.length==6){
+
+          let corte= placafalada.slice(5,6);
+          placafalada = placafalada+corte;
+
+
+        }
+    
+
      if( analisa_placa(placafalada)   ){
       
        let pfalada = 'placa falada:';
