@@ -149,7 +149,7 @@ body {
 
 
    position: absolute;
-   top: 480px;
+   top: 530px;
 
    border: 10px solid #787b7e; 
 
@@ -159,30 +159,12 @@ body {
 
    font-family: Arial;
    font-weight: normal;
-   font-size: 70%;
+   font-size: 100%;
    margin: 0;
 }
 
 
 #Button2 {
-
-   position: absolute;
-   top: 530px;
-
-   border: 10px solid #787b7e;
-
-   background-color: #787b7e;
-
-   color: #FFFFFF;
-   font-family: Arial;
-   font-weight: normal;
-   font-size: 70%;
-   margin: 0;
-
-}
-
-
-#Button3 {
 
    position: absolute;
    top: 580px;
@@ -194,7 +176,25 @@ body {
    color: #FFFFFF;
    font-family: Arial;
    font-weight: normal;
-   font-size: 70%;
+   font-size: 100%;
+   margin: 0;
+
+}
+
+
+#Button3 {
+
+   position: absolute;
+   top: 630px;
+
+   border: 10px solid #787b7e;
+
+   background-color: #787b7e;
+
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 100%;
    margin: 0;
 
 }

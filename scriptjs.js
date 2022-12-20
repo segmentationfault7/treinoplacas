@@ -154,7 +154,7 @@ function analisedefala3(plac3) {
   }
 
 
-     if(placafalada.length==7){
+     if( analisa_placa(placafalada) ){
       
        let pfalada = 'placa falada: \n' + placafalada;
 
@@ -439,7 +439,22 @@ function ovircodigo() {
   falarapp.falartexto(txt);
 
 }
+     
+      function analisa_placa(pl){
+      
+          let aux=pl.split();
+
+          if(pl.length()==7 && aux[0]>64 && aux[1]>64 && aux[2]>64 && aux[3]<58 && aux[4] <91 &&  aux[5]<58 && aux[6]<58 ){
+            
+
+           return true;
+
+          }else{
+
+            return false;
+          }
 
 
+      }
 
-carrega_listas();
+      carrega_listas();
