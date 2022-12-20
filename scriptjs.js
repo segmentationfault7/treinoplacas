@@ -86,7 +86,6 @@ function removerAcentos(str) {
 
 function carrega_listas() {
 
-  document.getElementById("Label5").innerHTML = 'AAA1A11';
 
   const Url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSrpY-EsBoSiOxGzo1Ffj61ea3QudtLBWbd4oceD-KAJlC-w0BV1YWCDpbPTPGCSX8Hhw3pYQOzUf7m/pub?output=csv';
 
@@ -168,7 +167,7 @@ function analisedefala3(plac3) {
      }else{
 
       document.getElementById('Label4').innerHTML ='fala não reconhecida!';
-      document.getElementById('Label5').innerHTML =  ' ------- ';
+      document.getElementById("Label5").innerHTML = '-------';
       falarapp.falartexto('não entendi!');
 
      }
@@ -463,6 +462,6 @@ function ovircodigo() {
             return retorno;
       }
       
-     
+    
 
       carrega_listas();
