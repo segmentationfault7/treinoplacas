@@ -64,7 +64,7 @@ body {
    display: flex;
 
    position: absolute;
-   top: 23px;
+   top: 22px;
 
 
    font-size: 240%;
@@ -187,7 +187,7 @@ body {
 #Button2 {
 
    position: absolute;
-   top: 580px;
+   top: 600px;
    width: 100px;
 
    border: 10px solid #787b7e;
@@ -206,7 +206,7 @@ body {
 #Button3 {
 
    position: absolute;
-   top: 630px;
+   top: 650px;
    width: 100px;
 
    border: 10px solid #787b7e;
