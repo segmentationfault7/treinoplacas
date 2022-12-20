@@ -154,7 +154,7 @@ function analisedefala3(plac3) {
   }
 
 
-     if( analisa_placa(placafalada) ){
+     if( placafalada.length==7 ){
       
        let pfalada = 'placa falada:' + placafalada;
 
