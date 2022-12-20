@@ -300,7 +300,7 @@ function analisedefala() {
   esta_online = navigator.onLine;
 
   document.getElementById('Label4').innerHTML = '';
-  esta_online = true;
+
 
   if (esta_online) {
 
