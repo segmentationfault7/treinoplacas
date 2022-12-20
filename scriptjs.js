@@ -128,6 +128,15 @@ function analisedefala3(plac3) {
 
   ret = '';
 
+  
+  if(plac3.length==6){
+
+    let corte= plac3.slice(5,6);
+    plac3= plac3+corte;
+
+
+  }
+
 
   for (var i = 0; i < 3; i++) {
 
@@ -153,13 +162,6 @@ function analisedefala3(plac3) {
   }
 
 
-        if(placafalada.length==6){
-
-          let corte= placafalada.slice(5,6);
-          placafalada = placafalada+corte;
-
-
-        }
     
 
      if( analisa_placa(placafalada)   ){
