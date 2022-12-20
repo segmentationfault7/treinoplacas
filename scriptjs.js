@@ -124,19 +124,21 @@ function carrega_listas() {
 
 
 function analisedefala3(plac3) {
-
+   
+  document.getElementById('Label5').innerHTML =plac3;
 
   ret = '';
-
+  
   
   if(plac3.length==6){
-
-    let corte= plac3.slice(5,6);
-    plac3= plac3+corte;
+     
+    let corte = plac3.slice(5,6);
+    plac3 = plac3 + corte;
 
 
   }
 
+ 
 
   for (var i = 0; i < 3; i++) {
 
@@ -161,7 +163,7 @@ function analisedefala3(plac3) {
 
   }
 
-
+     placafalada=plac3;
     
 
      if( analisa_placa(placafalada)   ){
@@ -298,6 +300,7 @@ function analisedefala() {
   esta_online = navigator.onLine;
 
   document.getElementById('Label4').innerHTML = '';
+  esta_online = true;
 
   if (esta_online) {
 
@@ -457,7 +460,7 @@ function ovircodigo() {
       function analisa_placa(pl){
       
           
-          console.log(pl.charCodeAt(1));
+         
           let retorno=false;
 
           if(pl.length==7 && pl.charCodeAt(0)>64 && pl.charCodeAt(1)>64 && pl.charCodeAt(2)>64 && pl.charCodeAt(3)<58 && pl.charCodeAt(4) <91 &&  pl.charCodeAt(5)<58 && pl.charCodeAt(6)<58 ){
