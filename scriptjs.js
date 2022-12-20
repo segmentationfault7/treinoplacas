@@ -167,8 +167,8 @@ function analisedefala3(plac3) {
 
      }else{
 
-      document.getElementById('Label4').innerHTML ='fala não entendida!';
-      document.getElementById("Label5").innerHTML =  '';
+      document.getElementById('Label4').innerHTML ='fala não reconhecida!';
+      document.getElementById("Label5").innerHTML =  '-------';
       falarapp.falartexto('não entendi!');
 
      }
@@ -462,5 +462,5 @@ function ovircodigo() {
 
             return retorno;
       }
-
+      document.getElementById("Label5").innerHTML = '-------';
       carrega_listas();
