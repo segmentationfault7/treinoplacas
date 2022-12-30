@@ -32,7 +32,11 @@ let esta_online;
 let ativaspeech = false;
 
 
-let recognition = new webkitSpeechRecognition();
+
+let recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+
+ 
+
 
 
 
@@ -40,7 +44,12 @@ let words1 = ['alfa', 'bravo', 'charlie', 'carly', 'charles', 'charge', 'celta',
 
 let grammar = '#JSGF V1.0; grammar otan; public <otan> = ' + words1.join(' | ') + ';';
 
-let speechRecognitionList = new webkitSpeechGrammarList();
+let speechRecognitionList = window.SpeechGrammarList || new webkitSpeechGrammarList();
+
+
+
+
+
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
@@ -333,15 +342,9 @@ recognition.onresult = function (event) {
 
   menssagem = command.toString();
 
-
-
-
   resultado = menssagem;
 
-
-
   analisedefala();
-
 
 };
 
@@ -349,12 +352,26 @@ recognition.onresult = function (event) {
 
 
 recognition.onerror = function (event) {
+ 
+  console.log('aconteceu erro');
   document.getElementById("Label3").innerHTML = ' ERRO... ';
 }
 
+
+
+
 recognition.onnomatch = function () {
-  console.log('Speech not recognized');
+  
+  console.log('sem reconhecimento expressivo');
+
 }
+
+
+recognition.onspeechend = () => {
+  recognition.stop();
+}
+
+
 
 
 function falar() {
@@ -477,5 +494,6 @@ function ovircodigo() {
       }
       
     
+      recognition.stop();
 
       carrega_listas();
