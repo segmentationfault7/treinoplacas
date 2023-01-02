@@ -35,13 +35,11 @@ let ativaspeech = false;
 
 let recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
- if(recognition){
+ 
 
-   console.log(' ERRO CRIACAO SPEECH');
-
- }
-
-
+ recognition.addEventListener('error', (event) => {
+  console.error(`Speech recognition error detected: ${event.error}`);
+});
 
 
 let words1 = ['alfa', 'bravo', 'charlie', 'carly', 'charles', 'charge', 'celta', 'echo', 'eco', 'eko', 'foxtrot', 'rockstar', 'golf', 'golfe', 'hotel', 'india', 'índio', 'inter', 'juliett', 'juliete', 'juliana', 'kilo', 'lima', 'mike', 'maiki', 'november', 'novembro', 'novembre', 'oscar', 'oscara', 'rosca', 'posca', 'porca', 'papa', 'quebec', 'playback', 'romeo', 'romeu', 'sierra', 'ceará', 'serra', 'tango', 'uniform', 'unifor', 'victor', 'whiskey', 'xray', 'yankee', 'ianque', 'yang', 'funk', 'eaq', 'eaqui', 'zulu', 'xis rei', 'cheguei', 'shirley', 'iank', 'iankee', 'ianque', 'yanque', 'bianchi', 'quilo', 'kg', 'killer', 'filó', 'tiro', 'rei', 'x-rei', 'x rei', 'ex rei', 'é que', 'exrei', 'errei', 'bianca', 'ierra', 'x-man', 'xmen', 'zero', 'cesto', '3º', '2º', 'cesta', 'sexta', 'cisto', 'pinto', 'negativo', 'quarto', 'nono', 'dona', 'nona', '8º', 'quinto', 'quinta', '1º', '4º', '5º', '6º', '7º', '9º', '0', 'frango', '7', 'sete', 'segundo', 'índia', 'sheik', 'delta', 'whisky', 'x-ray', 'juliet', 'o meu', 'sexto', 'oitavo', '6', 'primeiro', 'terceiro', 'sétimo', 'x race', 'aquilo', 'maike', 'é cor', 'bianch', 'x ray', 'alpha', 'segunda', 'cielo', 'é co', 'quarta', 'no no', 'tô no', '8', '1', '2', '3', '4', '5', '6', '7', '9', 'bec', 'nova', 'nulo', 'iac', 'brabo', 'gol', 'ótica', 'costa', 'texto', 'ssistema', 'mais', 'sto', 'bike', 'sys tu', 'tel', 'guerra', 'yank', 'e a', 'aqui', 'nome', 'dono', 'qbex', 'julia', 'outback', 'ango', 'urso', 'mapa', 'ulu', 'no na', 'ate', ' no ', 'papai', 'ex a', 'fotos trote', 'fox trote', 'quente', 'oitava', 'celta', 'numa', 'quatro', 'o meu', 'negativa', 'uisque', 'novo', 'costa'];
@@ -382,7 +380,7 @@ recognition.onerror = (event) => {
 
 function falar() {
 
-  recognition.abort();
+ 
 
   esta_online = navigator.onLine;
 
@@ -503,7 +501,6 @@ function ovircodigo() {
       }
       
     
-      recognition.stop();
-      recognition.abort();
+  
 
       carrega_listas();
