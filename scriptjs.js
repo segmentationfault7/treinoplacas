@@ -35,7 +35,11 @@ let ativaspeech = false;
 
 let recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
- 
+ if(recognition){
+
+   console.log(' ERRO CRIACAO SPEECH');
+
+ }
 
 
 
@@ -351,11 +355,6 @@ recognition.onresult = function (event) {
 
 
 
-recognition.onerror = function (event) {
- 
-  console.log('aconteceu erro');
-  document.getElementById("Label3").innerHTML = ' ERRO... ';
-}
 
 
 
@@ -373,10 +372,17 @@ recognition.onspeechend = () => {
 
 
 
+recognition.onerror = (event) => {
+  console.log(`Speech recognition error detected: ${event.error}`);
+  console.log(`Additional information: ${event.message}`);
+}
+
+
+
 
 function falar() {
 
-  recognition.stop();
+  recognition.abort();
 
   esta_online = navigator.onLine;
 
@@ -385,7 +391,7 @@ function falar() {
     falarapp.falartexto('q a p');
 
     placafalada = '';
-    
+
     recognition.start();
 
 
@@ -498,5 +504,6 @@ function ovircodigo() {
       
     
       recognition.stop();
+      recognition.abort();
 
       carrega_listas();
