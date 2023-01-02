@@ -376,6 +376,8 @@ recognition.onspeechend = () => {
 
 function falar() {
 
+  recognition.stop();
+
   esta_online = navigator.onLine;
 
   if (esta_online) {
@@ -383,6 +385,7 @@ function falar() {
     falarapp.falartexto('q a p');
 
     placafalada = '';
+    
     recognition.start();
 
 
