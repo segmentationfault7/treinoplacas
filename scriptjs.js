@@ -15,7 +15,7 @@ se a plava for soletrada: mike,quebec,Alfa,setimo,kilo,sexto,terceiro o algoriti
 const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numeros = "0123456789";
 const cardinais = ["primeiro", "segundo", "terceiro", "quarto", "quinto", "sexto", "sétimo", "oitavo", "nono", "negativo"];
-const alfabeto = ["Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-ray", "Yankee", "Zulu"];
+const alfabeto = ["Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "Xray", "Yankee", "Zulu"];
 const placa = ["B", "R", "A", "5", "I", "2", "2"];
 let codigo = ["Bravo", "Romeo", "Alfa", "Quinto", "India", "Segundo", "Segundo"];
 let num = 1;
@@ -38,7 +38,7 @@ let recognition = new webkitSpeechRecognition() || new SpeechRecognition();
  
 
  recognition.addEventListener('error', (event) => {
-  console.error(`Speech recognition error detected: ${event.error}`);
+  console.error('Speech recognition error detected: ${event.error}');
 });
 
 
@@ -232,7 +232,6 @@ function exibir_placa_falada() {
 
 
 
-
 function analisedefala() {
 
 
@@ -371,8 +370,8 @@ recognition.onspeechend = () => {
 
 
 recognition.onerror = (event) => {
-  console.log(`Speech recognition error detected: ${event.error}`);
-  console.log(`Additional information: ${event.message}`);
+  console.log('Speech recognition error detected: ${event.error}');
+  console.log('Additional information: ${event.message}');
 }
 
 
