@@ -436,7 +436,7 @@ function novaplaca() {
 
   if (ocultarlabel2) {
 
-    document.getElementById("Label2").innerHTML = "mostrar-código";
+    document.getElementById("Label2").innerHTML = "ver-código";
 
 
   } else {
@@ -462,7 +462,7 @@ function ocultarcodigo() {
     document.getElementById("Label2").innerHTML = codigo.join('/');
   } else {
 
-    document.getElementById("Label2").innerHTML = "mostrar-codigo";
+    document.getElementById("Label2").innerHTML = "ver-código";
     ocultarlabel2 = true;
 
   }
