@@ -501,6 +501,14 @@ function ovircodigo() {
       }
       
     
-  
+         function acionafala(text){
+
+          falarapp.falartexto(text);
+
+
+         }
+
+
+         falarapp.falartexto('teste');
 
       carrega_listas();
