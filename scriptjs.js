@@ -509,6 +509,6 @@ function ovircodigo() {
          }
 
 
-         falarapp.falartexto('teste');
+         falarapp.falartexto(' ');
 
       carrega_listas();
