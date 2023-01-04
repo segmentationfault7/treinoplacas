@@ -356,11 +356,9 @@ recognition.onresult = function (event) {
 
 
 
-
-
 recognition.onnomatch = function () {
   
-  console.log('sem reconhecimento expressivo');
+ // console.log('sem reconhecimento expressivo');
 
 }
 
@@ -373,7 +371,7 @@ recognition.onspeechend = () => {
 
 recognition.onerror = (event) => {
   console.log('Speech recognition error detected: ${event.error}');
-  console.log('Additional information: ${event.message}');
+ 
 }
 
 
