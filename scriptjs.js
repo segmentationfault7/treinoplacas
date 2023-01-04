@@ -184,6 +184,8 @@ function analisedefala3(plac3) {
         document.getElementById('Label4').innerHTML =pfalada;
 
         document.getElementById('Label5').innerHTML =  placafalada;
+
+        console.log(placafalada);
         
         falarapp.falartexto(ret);
 
