@@ -200,7 +200,7 @@ function analisedefala3(plac3) {
      }
 
 
-
+     recognition.stop();
   resultado = '';
 
 }
@@ -360,6 +360,7 @@ recognition.onresult = function (event) {
 recognition.onnomatch = function () {
   
    console.log('sem reconhecimento expressivo');
+   recognition.stop();
 
 }
 
@@ -372,6 +373,7 @@ recognition.onspeechend = () => {
 
 recognition.onerror = (event) => {
   console.log('recognition error');
+  recognition.stop();
  
 }
 
