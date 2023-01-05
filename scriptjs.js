@@ -195,6 +195,7 @@ function analisedefala3(plac3) {
       document.getElementById('Label4').innerHTML ='fala não reconhecida!';
       document.getElementById("Label5").innerHTML = '-------';
       falarapp.falartexto('não entendi!');
+      console.log('nao entendi');
 
      }
 
@@ -358,7 +359,7 @@ recognition.onresult = function (event) {
 
 recognition.onnomatch = function () {
   
- // console.log('sem reconhecimento expressivo');
+   console.log('sem reconhecimento expressivo');
 
 }
 
@@ -370,7 +371,7 @@ recognition.onspeechend = () => {
 
 
 recognition.onerror = (event) => {
-  console.log('Speech recognition error detected: ${event.error}');
+  console.log('recognition error');
  
 }
 
