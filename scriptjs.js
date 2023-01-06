@@ -135,7 +135,7 @@ function carrega_listas() {
 
 function aciona_analise(){
 
- analisedefala3(resultado);
+ analisedefala4(resultado);
 
 }
 
@@ -143,6 +143,7 @@ function aciona_analise(){
 function analisedefala3(plac3) {
    
   document.getElementById('Label5').innerHTML =plac3;
+  console.log(plac3);
 
   ret = '';
   
@@ -210,6 +211,58 @@ function analisedefala3(plac3) {
   resultado = '';
 
 }
+
+
+function analisedefala4(plac3) {
+   
+
+  ret = '';
+  
+  
+  if(plac3.length==6){
+     
+    let corte = plac3.slice(5,6);
+    plac3 = plac3 + corte;
+
+
+  }
+
+ 
+  for (var i = 0; i < 3; i++) {
+
+
+    ret += alfabeto[letras.indexOf(plac3[i])] + ' ';
+
+
+  }
+
+
+  ret += numeros2[numeros.indexOf(plac3[3])] + ' ';
+
+  if (letras.indexOf(plac3[4]) >= 0) { ret += alfabeto[letras.indexOf(plac3[4])] + ' '; }
+  else { ret += numeros2[numeros.indexOf(plac3[4])] + ' '; }
+
+
+  for (var i = 5; i < 7; i++) {
+
+
+    ret += numeros2[numeros.indexOf(plac3[i])] + ' ';
+
+
+  }
+
+     placafalada=plac3;
+    
+
+        console.log(placafalada);
+        
+        falarapp.falartexto(ret);
+
+    
+  resultado = '';
+
+}
+
 
 
 
