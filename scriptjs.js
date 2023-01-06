@@ -133,6 +133,12 @@ function carrega_listas() {
 
 
 
+function aciona_analise(){
+
+ analisedefala3(resultado);
+
+}
+
 
 function analisedefala3(plac3) {
    
