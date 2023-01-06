@@ -217,7 +217,7 @@ function analisedefala4(plac3) {
    
 
   ret = '';
-  
+  console.log(plac3);
   
   if(plac3.length==6){
      
