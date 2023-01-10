@@ -447,6 +447,8 @@ function falar() {
 
   if (esta_online) {
 
+    document.getElementById("Label4").innerHTML = 'placa falada:';
+    
     falarapp.falartexto('q a p');
 
     placafalada = '';
@@ -468,7 +470,7 @@ function falar() {
 function novaplaca() {
 
 
-  document.getElementById("Label3").innerHTML = 'placa falada';
+  document.getElementById("Label4").innerHTML = 'placa falada:';
 
   for (let i = 0; i < 7; i++) {
 
