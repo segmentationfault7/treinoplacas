@@ -441,7 +441,7 @@ recognition.onerror = (event) => {
 
 function falar() {
 
-  retorno_falar.falartexto('OK RETORNO FALAR');
+  //retorno_falar.falartexto('OK RETORNO FALAR');
 
   esta_online = navigator.onLine;
 
