@@ -38,7 +38,7 @@ let recognition = new webkitSpeechRecognition() || new SpeechRecognition();
  
 
  recognition.addEventListener('error', (event) => {
-  console.error('Speech recognition error detected: ${event.error}');
+  //console.error('Speech recognition error detected: ${event.error}');
 });
 
 
@@ -201,7 +201,7 @@ function analisedefala3(plac3) {
 
       document.getElementById('Label4').innerHTML ='fala não reconhecida!';
       document.getElementById("Label5").innerHTML = '-------';
-      falarapp.falartexto('não entendi!');
+      
       console.log('nao entendi');
 
      }
@@ -419,20 +419,20 @@ recognition.onresult = function (event) {
 recognition.onnomatch = function () {
   
    console.log('sem reconhecimento expressivo');
-   recognition.stop();
+  // recognition.stop();
 
 }
 
 
 recognition.onspeechend = () => {
-  recognition.stop();
+ // recognition.stop();
 }
 
 
 
 recognition.onerror = (event) => {
   console.log('recognition error');
-  recognition.stop();
+ // recognition.stop();
  
 }
 
