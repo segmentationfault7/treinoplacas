@@ -143,7 +143,7 @@ function aciona_analise(){
 function analisedefala3(plac3) {
    
   document.getElementById('Label5').innerHTML =plac3;
-  console.log(plac3);
+ 
 
   ret = '';
   
@@ -207,7 +207,7 @@ function analisedefala3(plac3) {
      }
 
 
-    // recognition.stop();
+    recognition.stop();
   resultado = '';
 
 }
@@ -420,13 +420,13 @@ recognition.onnomatch = function () {
   
    console.log('sem reconhecimento expressivo');
 
-  // recognition.stop();
+   recognition.stop();
 
 }
 
 
 recognition.onspeechend = () => {
- // recognition.stop();
+  recognition.stop();
 }
 
 
@@ -434,7 +434,7 @@ recognition.onspeechend = () => {
 recognition.onerror = (event) => {
   console.log('recognition error');
 
- // recognition.stop();
+  recognition.stop();
  
 }
 
