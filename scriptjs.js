@@ -255,6 +255,7 @@ function analisedefala4(plac3) {
     
 
         console.log(placafalada);
+        ret_falar.falartexto('RETORNOU INTERFACE placa falada');
         
         falarapp.falartexto(ret);
 
@@ -419,6 +420,7 @@ recognition.onresult = function (event) {
 recognition.onnomatch = function () {
   
    console.log('sem reconhecimento expressivo');
+   ret_falar.falartexto('RETORNOU INTERFACE sem reconhecimento expressivo');
   // recognition.stop();
 
 }
@@ -432,6 +434,7 @@ recognition.onspeechend = () => {
 
 recognition.onerror = (event) => {
   console.log('recognition error');
+  ret_falar.falartexto('RETORNOU INTERFACE ERROR RECOGNITION');
  // recognition.stop();
  
 }
