@@ -201,7 +201,7 @@ function analisedefala3(plac3) {
 
       document.getElementById('Label4').innerHTML ='fala não reconhecida!';
       document.getElementById("Label5").innerHTML = '-------';
-      ret_falar.falartexto('RETORNOU INTERFACE nao entendi');
+     
       console.log('nao entendi');
 
      }
@@ -257,7 +257,7 @@ function analisedefala4(plac3) {
         console.log(placafalada);
         
         falarapp.falartexto(ret);
-        ret_falar.falartexto('RETORNOU INTERFACE placa falada');
+        
     
   resultado = '';
 
@@ -419,7 +419,7 @@ recognition.onresult = function (event) {
 recognition.onnomatch = function () {
   
    console.log('sem reconhecimento expressivo');
-   ret_falar.falartexto('RETORNOU INTERFACE sem reconhecimento expressivo');
+
   // recognition.stop();
 
 }
@@ -433,7 +433,7 @@ recognition.onspeechend = () => {
 
 recognition.onerror = (event) => {
   console.log('recognition error');
-  ret_falar.falartexto('RETORNOU INTERFACE erro');
+
  // recognition.stop();
  
 }
