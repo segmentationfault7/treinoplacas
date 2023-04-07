@@ -495,8 +495,9 @@ function novaplaca() {
 
   }
 
+  let placanova=placa.join('')
 
-  document.getElementById("Label1").innerHTML = placa.join('');
+  document.getElementById("Label1").innerHTML = placanova;
 
 
   if (ocultarlabel2) {
@@ -511,7 +512,8 @@ function novaplaca() {
 
 
   }
-
+     
+  console.log("novaplaca"+placanova);
 
 
 }
