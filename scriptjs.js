@@ -201,14 +201,13 @@ function analisedefala3(plac3) {
 
       document.getElementById('Label4').innerHTML ='fala não reconhecida!';
       document.getElementById("Label5").innerHTML = '-------';
-     
       console.log('nao entendi');
 
      }
 
 
     recognition.stop();
-  resultado = '';
+    resultado = '';
 
 }
 
@@ -487,9 +486,21 @@ function novaplaca() {
 
     } else {
 
-      num = Math.floor(Math.random() * 25);
-      placa[i] = letras.charAt(num);
-      codigo[i] = alfabeto[num];
+                
+              if(i==4){
+             
+                num = Math.floor(Math.random() * 9);
+             
+              }else{
+
+                num = Math.floor(Math.random() * 25);
+
+              }
+              
+                placa[i] = letras.charAt(num);
+                codigo[i] = alfabeto[num];
+
+
 
     }
 
