@@ -489,7 +489,7 @@ function novaplaca() {
                 
               if(i==4){
              
-                num = Math.floor(Math.random() * 9);
+                num = Math.floor(Math.random() * 10);
              
               }else{
 
