@@ -493,7 +493,7 @@ function novaplaca() {
              
               }else{
 
-                num = Math.floor(Math.random() * 25);
+                num = Math.floor(Math.random() * 26);
 
               }
               
