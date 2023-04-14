@@ -256,6 +256,7 @@ function analisedefala4(plac3) {
         console.log(placafalada);
         
         falarapp.falartexto(ret);
+        console.log(ret);
         
     
   resultado = '';
@@ -367,7 +368,6 @@ function analisedefala() {
 
 
 
-
   esta_online = navigator.onLine;
 
   document.getElementById('Label4').innerHTML = '';
@@ -451,6 +451,7 @@ function falar() {
     document.getElementById("Label4").innerHTML = 'placa falada:';
     
     falarapp.falartexto('q a p');
+    console.log('q a p');
 
     placafalada = '';
 
