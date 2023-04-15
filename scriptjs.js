@@ -192,11 +192,10 @@ function analisedefala3(plac3) {
 
         document.getElementById('Label5').innerHTML =  placafalada;
 
-        console.log(placafalada);
-        
-        console.log('codigo'+ret);
+        console.log("placafalada"+placafalada+ret);       
+      
 
-     //   falarapp.falartexto(ret);
+       //  falarapp.falartexto(ret);
 
 
      }else{
@@ -452,8 +451,8 @@ function falar() {
 
     document.getElementById("Label4").innerHTML = 'placa falada:';
     
-   // falarapp.falartexto('q a p');
-    console.log('q a p');
+     falarapp.falartexto('q a p');
+     console.log('q a p');
 
     placafalada = '';
 
