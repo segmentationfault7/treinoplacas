@@ -452,7 +452,7 @@ function falar() {
 
     document.getElementById("Label4").innerHTML = 'placa falada:';
     
-    falarapp.falartexto('q a p');
+   // falarapp.falartexto('q a p');
     console.log('q a p');
 
     placafalada = '';
