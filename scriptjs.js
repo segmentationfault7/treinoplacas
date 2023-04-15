@@ -194,7 +194,9 @@ function analisedefala3(plac3) {
 
         console.log(placafalada);
         
-        falarapp.falartexto(ret);
+        console.log('codigo'+ret);
+
+     //   falarapp.falartexto(ret);
 
 
      }else{
@@ -253,10 +255,10 @@ function analisedefala4(plac3) {
      placafalada=plac3;
     
 
-        console.log(placafalada);
+    //    console.log(placafalada);
         
-        falarapp.falartexto(ret);
-        console.log(ret);
+      //  falarapp.falartexto(ret);
+       // console.log(ret);
         
     
   resultado = '';
