@@ -195,7 +195,7 @@ function analisedefala3(plac3) {
         console.log("placafalada"+placafalada+ret);       
       
 
-       //  falarapp.falartexto(ret);
+        falarapp.falartexto(ret);
 
 
      }else{
