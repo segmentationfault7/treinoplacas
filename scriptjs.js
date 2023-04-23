@@ -502,6 +502,10 @@ function novaplaca() {
               }
               
                 placa[i] = letras.charAt(num);
+
+                if(codigo[i].localeCompare("Echo")==0){codigo[i]="eco";}
+
+
                 codigo[i] = alfabeto[num];
 
 
@@ -528,7 +532,7 @@ function novaplaca() {
   }
      
 
-  if(placanova.indexOf("Echo")>-1){placanova=placanova.replace(/Echo/g,"eco");}
+  
  
   console.log("novaplaca"+placanova);
 
