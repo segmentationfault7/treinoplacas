@@ -505,7 +505,6 @@ function novaplaca() {
                 codigo[i] = alfabeto[num];
 
 
-
     }
 
   }
