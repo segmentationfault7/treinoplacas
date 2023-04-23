@@ -192,6 +192,8 @@ function analisedefala3(plac3) {
 
         document.getElementById('Label5').innerHTML =  placafalada;
 
+        if(ret.indexOf("Echo")>-1){ret=ret.replace(/Echo/g,"eco");}
+       
         console.log("placafalada"+placafalada+ret);       
       
 
