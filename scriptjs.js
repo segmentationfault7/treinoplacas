@@ -528,6 +528,9 @@ function novaplaca() {
 
   }
      
+
+  if(placanova.indexOf("Echo")>-1){placanova=placanova.replace(/Echo/g,"eco");}
+ 
   console.log("novaplaca"+placanova);
 
 
