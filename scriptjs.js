@@ -502,12 +502,11 @@ function novaplaca() {
               }
               
                 placa[i] = letras.charAt(num);
-
-                if(codigo[i].localeCompare("Echo")==0){codigo[i]="eco";}
-
+                
 
                 codigo[i] = alfabeto[num];
-
+                
+                if(codigo[i].localeCompare("Echo")==0){codigo[i]="eco";}
 
     }
 
