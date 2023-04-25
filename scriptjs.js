@@ -104,7 +104,7 @@ function carrega_listas() {
 
   xhttp.open('GET', Url, false);
 
-  xhttp.send();
+ 
 
   let pagina = xhttp.responseText;
 
@@ -119,9 +119,17 @@ function carrega_listas() {
 
   for (let k = 1; k < linhas.length; k++) {
 
-    aux = linhas[k].split(',');
-    palavra1[k - 1] = aux[0];
-    letra1[k - 1] = aux[1];
+   
+   
+      if(!aux[0].localeCompare('strings')){
+      
+        aux = linhas[k].split(',');
+        palavra1[k - 1] = aux[0];
+        letra1[k - 1] = aux[1];
+      
+      }
+
+
 
   }
 
@@ -595,7 +603,8 @@ function ovircodigo() {
 
          }
 
+carrega_listas();
 
-         falarapp.falartexto(' ');
+falarapp.falartexto(' ');
 
-      carrega_listas();
+      
