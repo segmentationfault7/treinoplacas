@@ -127,6 +127,9 @@ function carrega_listas() {
         palavra1[k - 1] = aux[0];
         letra1[k - 1] = aux[1];
       
+      }else{
+
+        console.log('diferente');
       }
 
 
