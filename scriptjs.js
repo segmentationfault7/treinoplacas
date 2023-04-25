@@ -121,23 +121,19 @@ function carrega_listas() {
 
     aux = linhas[k].split(',');
    
-      if(!aux[0].localeCompare('strings')){
+      if(aux[0].localeCompare('strings')==0){
       
        
-        palavra1[k - 1] = aux[0];
-        letra1[k - 1] = aux[1];
+         console.log(aux[1]);
       
       }else{
 
-
-       console.log(aux[1]);
+        palavra1[k - 1] = aux[0];
+        letra1[k - 1] = aux[1];
+      
 
 
       }
-
-
-
-      
 
 
 
