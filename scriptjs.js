@@ -104,7 +104,7 @@ function carrega_listas() {
 
   xhttp.open('GET', Url, false);
 
- 
+  xhttp.send();
 
   let pagina = xhttp.responseText;
 
@@ -129,9 +129,15 @@ function carrega_listas() {
       
       }else{
 
-        console.log(aux[1].toString);
+
+       console.log(aux[1]);
+
 
       }
+
+
+
+      
 
 
 
@@ -607,8 +613,8 @@ function ovircodigo() {
 
          }
 
-carrega_listas();
+ carrega_listas();
 
 falarapp.falartexto(' ');
 
-      
+     
