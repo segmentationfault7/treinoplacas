@@ -125,7 +125,7 @@ function carrega_listas() {
    
       if(aux[0].localeCompare('strings')==0){
       
-         dados_carregados[contaux]=urls[contaux]+aux[1];
+         dados_carregados[contaux]=aux[1];
          contaux++;
 
         // console.log(urls[k-1]+aux[1]);
