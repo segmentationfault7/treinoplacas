@@ -93,7 +93,7 @@ function removerAcentos(str) {
 }
 
 
-
+let dados_carregados=[''];
 
 function carrega_listas() {
 
@@ -115,7 +115,9 @@ function carrega_listas() {
 
   let palavra1 = [''];
   let letra1 = [''];
+  let urls=['loginurl=','logintitulo=','iniciourl=','iniciotitulo=','pesquisaurl=','pesquisatitulo='];
 
+   let contaux=0;
 
   for (let k = 1; k < linhas.length; k++) {
 
@@ -123,15 +125,16 @@ function carrega_listas() {
    
       if(aux[0].localeCompare('strings')==0){
       
-       
-         console.log(aux[1]);
+         dados_carregados[contaux]=urls[k-1]+aux[1];
+         contaux++;
+
+        // console.log(urls[k-1]+aux[1]);
       
       }else{
 
         palavra1[k - 1] = aux[0];
         letra1[k - 1] = aux[1];
       
-
 
       }
 
