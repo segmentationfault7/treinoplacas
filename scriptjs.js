@@ -475,6 +475,9 @@ function falar() {
 
     placafalada = '';
 
+
+       setTimeout(recognition.stop,13000);
+
     recognition.start();
 
 
